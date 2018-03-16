@@ -1,3 +1,10 @@
+<a name="1.0.5"></a>
+## 1.0.5 (2018-03-16)
+
+* Ensure use a key for code component ([606787b](https://github.com/Kikobeats/react-codecopy/commit/606787b))
+
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2018-03-16)
 
