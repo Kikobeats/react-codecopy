@@ -2,7 +2,7 @@
 
 <p align="center">
   <br>
-  <img src="demo" alt="react-codecopy">
+  <img src="demo.gif" alt="react-codecopy">
   <br>
 </p>
 
