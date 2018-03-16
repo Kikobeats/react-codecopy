@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+## 1.0.4 (2018-03-16)
+
+* Remove log ([5d65f6a](https://github.com/Kikobeats/react-codecopy/commit/5d65f6a))
+
+
+
 <a name="1.0.3"></a>
 ## 1.0.3 (2018-03-16)
 
