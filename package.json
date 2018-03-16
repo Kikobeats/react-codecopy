@@ -1,0 +1,104 @@
+{
+  "name": "react-codecopy",
+  "description": "\"Copy to clipboard button\" for your code snippets",
+  "homepage": "https://documentup.com/Kikobeats/react-codecopy",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.m.js",
+  "author": {
+    "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
+    "url": "https://kikobeats.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kikobeats/react-codecopy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/react-codecopy/issues"
+  },
+  "keywords": [
+    "react",
+    "copy",
+    "snippet",
+    "code",
+    "clip",
+    "clipboard",
+    "button"
+  ],
+  "dependencies": {
+    "react-copy-to-clipboard": "~5.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-centered": "latest",
+    "@storybook/addon-options": "latest",
+    "@storybook/react": "latest",
+    "babel-cli": "latest",
+    "babel-eslint": "latest",
+    "babel-plugin-transform-class-properties": "latest",
+    "babel-plugin-transform-object-rest-spread": "latest",
+    "babel-plugin-transform-react-constant-elements": "latest",
+    "babel-plugin-transform-react-inline-elements": "latest",
+    "babel-plugin-transform-react-pure-class-to-function": "latest",
+    "babel-plugin-transform-react-remove-prop-types": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-react": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "finepack": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "microbundle": "latest",
+    "npm-check-updates": "latest",
+    "prettier-standard": "latest",
+    "prop-types": "latest",
+    "react": "^16",
+    "react-dom": "^16",
+    "size-limit": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest",
+    "styled-components": "~3.2.3"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "build": "npm run build:babel && npm run build:microbundle",
+    "build-storybook": "build-storybook",
+    "build:babel": "NODE_ENV=production BABEL_ENV=production babel src -d lib",
+    "build:microbundle": "NODE_ENV=production microbundle build --target browser --entry lib/index.js --format es,cjs",
+    "dev": "start-storybook -p 6006",
+    "format": "prettier-standard index.js {src,stories,.storybook}/**/*.js --single-quote",
+    "lint": "standard-markdown && standard",
+    "posttest": "npm run size",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run lint && npm run update",
+    "size": "size-limit",
+    "start": "node scripts/start.js",
+    "test": "exit 0",
+    "update": "ncu --error-level 2"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "package.json": [
+      "finepack",
+      "git add"
+    ],
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "styled-components": ">= 3",
+    "react": ">= 16 < 17"
+  },
+  "standard": {
+    "ignore": [
+      "/lib/"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "jsx-a11y"
+    ]
+  }
+}
