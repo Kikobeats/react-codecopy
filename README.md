@@ -1,9 +1,7 @@
 # react-codecopy
 
 <p align="center">
-  <br>
   <img src="demo.gif" alt="react-codecopy">
-  <br>
 </p>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/react-codecopy.svg?style=flat-square)
