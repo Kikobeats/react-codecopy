@@ -2,7 +2,7 @@
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
   "homepage": "https://documentup.com/Kikobeats/react-codecopy",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "lib/index.m.js",
   "author": {
