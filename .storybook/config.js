@@ -7,8 +7,6 @@ function loadStories () {
   require('../stories')
 }
 
-setAddon(JSXAddon)
-
 setOptions({
   name,
   url,
