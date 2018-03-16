@@ -158,29 +158,21 @@ const CodeCopy = class extends Component {
     const {labels, codeComponent: CodeComponent} = this.props
 
     return (
-      <div>
-        <ClipboardWrapper
-          onMouseEnter={() => this.setState({isHover: true})}
-          onMouseLeave={() => this.setState({isHover: false})}>
-          <CopyToClipboard
-            text={this.props.children}
-            onCopy={() => this.setState({label: labels.copied})}>
-            <ClipboardButton
-              isHover={isHover}
-              aria-label={label}
-              onMouseLeave={() => this.setState({label: labels.copy})}>
-              <ButtonIcon />
-            </ClipboardButton>
-          </CopyToClipboard>
-          <CodeComponent {...this.props} />
-        </ClipboardWrapper>
-        <p style={{
-          textAlign: 'center',
-          fontFamily: 'helvetica, sans-serif',
-          paddingTop: '1rem',
-          fontSize: '16px'
-        }}>Hover the text to copy it</p>
-      </div>
+      <ClipboardWrapper
+        onMouseEnter={() => this.setState({isHover: true})}
+        onMouseLeave={() => this.setState({isHover: false})}>
+        <CopyToClipboard
+          text={this.props.children}
+          onCopy={() => this.setState({label: labels.copied})}>
+          <ClipboardButton
+            isHover={isHover}
+            aria-label={label}
+            onMouseLeave={() => this.setState({label: labels.copy})}>
+            <ButtonIcon />
+          </ClipboardButton>
+        </CopyToClipboard>
+        <CodeComponent {...this.props} />
+      </ClipboardWrapper>
     )
   }
 }

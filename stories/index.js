@@ -29,7 +29,25 @@ const CodeCopy = createCodeCopy(CodeComponent)
 storiesOf('CodeCopy', module)
   .addDecorator(centered)
   .add('default', () => (
-    <CodeCopy>{`<!-- Microlink SDK Vanilla/UMD bundle -->
+    <div>
+      <CodeCopy>
+        {`<!-- Microlink SDK Vanilla/UMD bundle -->
 <script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}
-    </CodeCopy>
+      </CodeCopy>
+      <p
+        style={{
+          textAlign: 'center',
+          fontFamily: 'helvetica, sans-serif',
+          paddingTop: '1rem',
+          fontSize: '16px'
+        }}>
+        Hover the text to copy it. See on{' '}
+        <a
+          target='_blank'
+          href='https://github.com/Kikobeats/react-codecopy'
+          style={{color: '#0366d6'}}>
+          GitHub
+        </a>.
+      </p>
+    </div>
   ))
