@@ -32,7 +32,7 @@ const {reactCodecopy} = require('react-codecopy')
 const CodeComponent = ({children, ...props}) => (
   <pre>
     <code>{children}</code>
-  </code>
+  </pre>
 )
 
 const CodeCopy = createCodeCopy(CodeComponent)
@@ -49,7 +49,7 @@ const CodeCopy = require('react-codecopy')
 const CodeComponent = ({children, ...props}) => (
   <pre>
     <code>{children}</code>
-  </code>
+  </pre>
 )
 
 <CodeCopy codeComponent={CodeComponent}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
