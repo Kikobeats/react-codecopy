@@ -8,7 +8,6 @@
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/react-codecopy.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/react-codecopy/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/react-codecopy)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/react-codecopy.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/react-codecopy)
 [![Dependency status](https://img.shields.io/david/Kikobeats/react-codecopy.svg?style=flat-square)](https://david-dm.org/Kikobeats/react-codecopy)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/react-codecopy.svg?style=flat-square)](https://david-dm.org/Kikobeats/react-codecopy#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/react-codecopy.svg?style=flat-square)](https://www.npmjs.org/package/react-codecopy)
