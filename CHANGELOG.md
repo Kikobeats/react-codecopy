@@ -1,3 +1,10 @@
+<a name="1.0.3"></a>
+## 1.0.3 (2018-03-16)
+
+* Add generate build command ([e87b483](https://github.com/Kikobeats/react-codecopy/commit/e87b483))
+
+
+
 <a name="1.0.2"></a>
 ## 1.0.2 (2018-03-16)
 
