@@ -61,7 +61,7 @@
     "node": ">= 8"
   },
   "files": [
-    "index.js"
+    "lib"
   ],
   "scripts": {
     "build": "npm run build:babel && npm run build:microbundle",
