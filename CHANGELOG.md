@@ -1,3 +1,12 @@
+<a name="1.0.2"></a>
+## 1.0.2 (2018-03-16)
+
+* Fix files ([6116b1f](https://github.com/Kikobeats/react-codecopy/commit/6116b1f))
+* Update README.md ([09f6cc2](https://github.com/Kikobeats/react-codecopy/commit/09f6cc2))
+* Update README.md ([d1e7676](https://github.com/Kikobeats/react-codecopy/commit/d1e7676))
+
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2018-03-16)
 
