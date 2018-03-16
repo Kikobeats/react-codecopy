@@ -72,6 +72,7 @@
     "format": "prettier-standard index.js {src,stories,.storybook}/**/*.js --single-quote",
     "lint": "standard-markdown && standard",
     "prepublishOnly": "npm run build",
+    "pretest": "npm run lint",
     "start": "node scripts/start.js",
     "test": "exit 0"
   },
