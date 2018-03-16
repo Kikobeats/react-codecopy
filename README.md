@@ -25,7 +25,7 @@ $ npm install react-codecopy --save
 ### Using Constructor
 
 ```jsx
-const {reactCodecopy} = require('react-codecopy')
+const {createCodeCopy} = require('react-codecopy')
 
 const CodeComponent = ({children, ...props}) => (
   <pre>
