@@ -1,7 +1,5 @@
 # react-codecopy
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/react-codecopy.svg)](https://greenkeeper.io/)
-
 <p align="center">
   <br>
   <img src="demo" alt="react-codecopy">
