@@ -15,10 +15,10 @@ const Svg = styled.svg`
 
 const ButtonIcon = props => (
   <Svg
-    height='16'
+    height={16}
     viewBox='0 0 14 16'
     version='1.1'
-    width='16'
+    width={16}
     aria-hidden='true'
     {...props}
   >
@@ -185,7 +185,7 @@ const CodeCopy = class extends Component {
             <ButtonIcon />
           </ClipboardButton>
         </CopyToClipboard>
-        <CodeComponent {...this.props} />
+        <CodeComponent key={this.props.children} {...this.props} />
       </ClipboardWrapper>
     )
   }
