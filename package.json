@@ -71,6 +71,7 @@
     "dev": "start-storybook -p 6006",
     "format": "prettier-standard index.js {src,stories,.storybook}/**/*.js --single-quote",
     "lint": "standard-markdown && standard",
+    "precommit": "lint-staged",
     "pretest": "npm run lint",
     "start": "node scripts/start.js",
     "test": "exit 0"
