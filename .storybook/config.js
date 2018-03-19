@@ -3,7 +3,7 @@ import { setOptions } from '@storybook/addon-options'
 
 const { name, homepage: url } = require('../package.json')
 
-function loadStories () {
+function loadStories() {
   require('../stories')
 }
 
@@ -11,7 +11,7 @@ setOptions({
   name,
   url,
   goFullScreen: false,
-  showStoriesPanel: false,
+  showStoriesPanel: true,
   showAddonPanel: false,
   showSearchBox: false,
   addonPanelInRight: false,

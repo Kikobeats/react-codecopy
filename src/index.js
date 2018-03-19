@@ -1,10 +1,11 @@
 import React, { createElement, Component } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import styled, { css } from 'styled-components'
+import styled, { ThemeProvider, css } from 'styled-components'
 
 import ClipboardIcon from './icon'
 import ClipboardButton from './button'
+import getTheme from './theme'
 
 const svgStyle = css`
   border-radius: 0;
@@ -41,28 +42,31 @@ const CodeCopy = class extends Component {
     const {
       labels,
       codeComponent: CodeComponent,
-      iconComponent: IconComponent
+      iconComponent: IconComponent,
+      theme
     } = this.props
 
     return (
-      <ClipboardWrapper
-        onMouseEnter={() => this.setState({ isHover: true })}
-        onMouseLeave={() => this.setState({ isHover: false })}
-      >
-        <CopyToClipboard
-          text={this.props.children}
-          onCopy={() => this.setState({ label: labels.copied })}
+      <ThemeProvider theme={getTheme(theme)}>
+        <ClipboardWrapper
+          onMouseEnter={() => this.setState({ isHover: true })}
+          onMouseLeave={() => this.setState({ isHover: false })}
         >
-          <ClipboardButton
-            isHover={isHover}
-            aria-label={label}
-            onMouseLeave={() => this.setState({ label: labels.copy })}
+          <CopyToClipboard
+            text={this.props.children}
+            onCopy={() => this.setState({ label: labels.copied })}
           >
-            <IconComponent />
-          </ClipboardButton>
-        </CopyToClipboard>
-        <CodeComponent key={this.props.children} {...this.props} />
-      </ClipboardWrapper>
+            <ClipboardButton
+              isHover={isHover}
+              aria-label={label}
+              onMouseLeave={() => this.setState({ label: labels.copy })}
+            >
+              <IconComponent />
+            </ClipboardButton>
+          </CopyToClipboard>
+          <CodeComponent key={this.props.children} {...this.props} />
+        </ClipboardWrapper>
+      </ThemeProvider>
     )
   }
 }
@@ -75,12 +79,12 @@ CodeCopy.defaultProps = {
 }
 
 export const createCodeCopy = ({
-  codeComponent,
-  iconComponent = ClipboardIcon
+  iconComponent = ClipboardIcon,
+  ...params
 }) => props =>
   createElement(CodeCopy, {
-    codeComponent,
     iconComponent: createClipboardIcon(iconComponent),
+    ...params,
     ...props
   })
 

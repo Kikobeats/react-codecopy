@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default props => (
   <svg
     height={16}
