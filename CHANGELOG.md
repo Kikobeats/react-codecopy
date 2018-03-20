@@ -1,3 +1,14 @@
+<a name="1.0.6"></a>
+## 1.0.6 (2018-03-20)
+
+* Add possiblity to specify icon ([d5fe0bf](https://github.com/Kikobeats/react-codecopy/commit/d5fe0bf))
+* Generate build on publish ([9acba96](https://github.com/Kikobeats/react-codecopy/commit/9acba96))
+* Improve API ([b94556c](https://github.com/Kikobeats/react-codecopy/commit/b94556c))
+* Remove commit lib ([5c97095](https://github.com/Kikobeats/react-codecopy/commit/5c97095))
+* Update README.md ([88fea30](https://github.com/Kikobeats/react-codecopy/commit/88fea30))
+
+
+
 <a name="1.0.5"></a>
 ## 1.0.5 (2018-03-16)
 
