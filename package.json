@@ -53,6 +53,7 @@
     "prop-types": "latest",
     "react": "^16",
     "react-dom": "^16",
+    "react-feather": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "styled-components": "~3.2.3"

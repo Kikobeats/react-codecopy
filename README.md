@@ -22,24 +22,6 @@ $ npm install react-codecopy --save
 
 ## Usage
 
-### Using Constructor
-
-```jsx
-import {createCodeCopy} from 'react-codecopy'
-
-const CodeComponent = ({children, ...props}) => (
-  <pre>
-    <code>{children}</code>
-  </pre>
-)
-
-const CodeCopy = createCodeCopy(CodeComponent)
-
-<CodeCopy>{`<!-- Microlink SDK Vanilla/UMD bundle -->
-<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</CodeCopy>
-```
-
-### Passing `Code` component
 
 ```jsx
 import CodeCopy from 'react-codecopy'
@@ -53,6 +35,8 @@ const CodeComponent = ({children, ...props}) => (
 <CodeCopy codeComponent={CodeComponent}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
 <script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</CodeCopy>
 ```
+
+Additionally you can specify `iconComponent`.
 
 ## License
 

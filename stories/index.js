@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import centered from '@storybook/addon-centered'
 import { Copy } from 'react-feather'
 
-import { createCodeCopy } from '../src'
+import CodeCopy from '../src'
 
 import styled from 'styled-components'
 
@@ -25,9 +25,9 @@ const codeComponent = ({ children, ...props }) => (
   </Pre>
 )
 
-const createStory = CodeCopy => (
+const createStory = props => (
   <div>
-    <CodeCopy>
+    <CodeCopy {...props}>
       {`<!-- Microlink SDK Vanilla/UMD bundle -->
 <script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}
     </CodeCopy>
@@ -53,59 +53,47 @@ const createStory = CodeCopy => (
 
 storiesOf('CodeCopy', module)
   .addDecorator(centered)
-  .add('default', () =>
-    createStory(
-      createCodeCopy({
-        codeComponent
-      })
-    )
-  )
+  .add('default', () => createStory({ codeComponent }))
   .add('custom icon', () =>
-    createStory(
-      createCodeCopy({
-        codeComponent,
-        iconComponent: props => <Copy size={16} {...props} />
-      })
-    )
+    createStory({
+      codeComponent,
+      iconComponent: props => <Copy size={16} {...props} />
+    })
   )
   .add('custom labels', () =>
-    createStory(
-      createCodeCopy({
-        codeComponent,
-        labels: {
-          copy: 'click to copy',
-          copied: 'copied, yay!'
-        }
-      })
-    )
+    createStory({
+      codeComponent,
+      labels: {
+        copy: 'click to copy',
+        copied: 'copied, yay!'
+      }
+    })
   )
   .add('custom theme', () =>
-    createStory(
-      createCodeCopy({
-        theme: {
-          button: {
-            color: '#4a4c4b',
-            bg: '#eff3f6',
-            gradient: 'linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)',
-            border: '1px solid rgba(27, 31, 35, 0.2)',
-            hover: {
-              bg: 'rgb(230, 235, 241)',
-              gradient:
-                'linear-gradient(-180deg, rgb(240, 243, 246) 0%, rgb(230, 235, 241) 90%)',
-              border: 'rgba(27, 31, 35, 0.35)'
-            },
-            active: {
-              bg: 'rgb(233, 236, 239)',
-              border: 'rgba(27, 31, 35, 0.35)'
-            }
+    createStory({
+      codeComponent,
+      theme: {
+        button: {
+          color: '#4a4c4b',
+          bg: '#eff3f6',
+          gradient: 'linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)',
+          border: '1px solid rgba(27, 31, 35, 0.2)',
+          hover: {
+            bg: 'rgb(230, 235, 241)',
+            gradient:
+              'linear-gradient(-180deg, rgb(240, 243, 246) 0%, rgb(230, 235, 241) 90%)',
+            border: 'rgba(27, 31, 35, 0.35)'
           },
-          tooltip: {
-            bg: '#1b1f23',
-            color: '#fff'
+          active: {
+            bg: 'rgb(233, 236, 239)',
+            border: 'rgba(27, 31, 35, 0.35)'
           }
         },
-        codeComponent,
-        iconComponent: props => <Copy size={16} {...props} />
-      })
-    )
+        tooltip: {
+          bg: '#1b1f23',
+          color: '#fff'
+        }
+      },
+      iconComponent: props => <Copy size={16} {...props} />
+    })
   )
