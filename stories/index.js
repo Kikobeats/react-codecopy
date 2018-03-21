@@ -19,17 +19,13 @@ const Pre = styled.pre`
   color: #4a4c4b;
 `
 
-const codeComponent = ({ children, ...props }) => (
-  <Pre>
-    <code>{children}</code>
-  </Pre>
-)
-
-const createStory = props => (
+const createStory = (props = {}) => (
   <div>
     <CodeCopy {...props}>
-      {`<!-- Microlink SDK Vanilla/UMD bundle -->
-<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}
+      <Pre>
+        <code>{`<!-- Microlink SDK Vanilla/UMD bundle -->
+<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</code>
+      </Pre>
     </CodeCopy>
     <p
       style={{
@@ -53,16 +49,14 @@ const createStory = props => (
 
 storiesOf('CodeCopy', module)
   .addDecorator(centered)
-  .add('default', () => createStory({ codeComponent }))
+  .add('default', () => createStory())
   .add('custom icon', () =>
     createStory({
-      codeComponent,
       iconComponent: props => <Copy size={16} {...props} />
     })
   )
   .add('custom labels', () =>
     createStory({
-      codeComponent,
       labels: {
         copy: 'click to copy',
         copied: 'copied, yay!'
@@ -71,7 +65,6 @@ storiesOf('CodeCopy', module)
   )
   .add('custom theme', () =>
     createStory({
-      codeComponent,
       theme: {
         button: {
           color: '#4a4c4b',
