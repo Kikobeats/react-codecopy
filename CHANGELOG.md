@@ -1,3 +1,10 @@
+<a name="2.0.1"></a>
+## 2.0.1 (2018-03-21)
+
+* Simplify all the things ([4c062ae](https://github.com/Kikobeats/react-codecopy/commit/4c062ae))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2018-03-21)
 
