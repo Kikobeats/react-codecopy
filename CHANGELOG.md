@@ -1,3 +1,11 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2018-03-21)
+
+* Ignore lib ([f4ec932](https://github.com/Kikobeats/react-codecopy/commit/f4ec932))
+* Simplify API ([67e855c](https://github.com/Kikobeats/react-codecopy/commit/67e855c))
+
+
+
 <a name="1.0.6"></a>
 ## 1.0.6 (2018-03-20)
 
