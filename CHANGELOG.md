@@ -1,3 +1,10 @@
+<a name="2.1.0"></a>
+# 2.1.0 (2018-03-22)
+
+* Add black theme ([24caef5](https://github.com/Kikobeats/react-codecopy/commit/24caef5))
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1 (2018-03-21)
 
