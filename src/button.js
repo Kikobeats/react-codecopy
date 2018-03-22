@@ -14,7 +14,8 @@ export default styled.button`
   ${({ theme: { button, tooltip } }) => css`
     color: ${button.color};
     background-color: ${button.bg};
-    background-image: ${button.gradient};
+    background-image: ${button.bgImage};
+    background-position: -0.5em;
 
     position: absolute;
     display: inline-block;
@@ -46,8 +47,8 @@ export default styled.button`
 
     &:hover {
       background-color: ${button.hover.bg};
-      background-image: ${button.hover.gradient};
-      background-position: 0px -0.5em;
+      background-image: ${button.hover.bgImage};
+      background-position: ${button.hover.bgPosition};
       border-color: ${button.hover.border};
       box-shadow: none;
     }

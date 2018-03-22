@@ -7,7 +7,7 @@ import ClipboardButton from './button'
 import ClipboardIcon from './icon'
 import getTheme from './theme'
 
-const svgStyle = css`
+const svgStyle = ({ theme }) => css`
   border-radius: 0;
   margin-top: -3px;
   position: relative;
@@ -15,11 +15,12 @@ const svgStyle = css`
   padding: 0;
   vertical-align: initial;
   min-height: initial;
+  ${theme === 'dark' && `fill: white;`};
 `
 
-const createClipboardIcon = iconComponent =>
+const createClipboardIcon = ({ theme, iconComponent }) =>
   styled(iconComponent)`
-    ${svgStyle};
+    ${svgStyle({ theme })};
   `
 
 const ClipboardWrapper = styled.div`
@@ -40,7 +41,7 @@ const CodeCopy = class extends Component {
   render () {
     const { isHover, label } = this.state
     const { labels, theme, children } = this.props
-    const IconComponent = createClipboardIcon(this.props.iconComponent)
+    const IconComponent = createClipboardIcon(this.props)
 
     return (
       <ThemeProvider theme={getTheme(theme)}>
