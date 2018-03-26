@@ -36,6 +36,10 @@ import CodeCopy from 'react-codecopy'
 
 Additionally you can specify `iconComponent`.
 
+## Related
+
+- [codecopy](https://github.com/Kikobeats/codecopy) – "Copy to clipboard" button for your code snippets.
+
 ## License
 
 **react-codecopy** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/Kikobeats/react-codecopy/blob/master/LICENSE.md) License.<br>
