@@ -11,7 +11,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/react-codecopy.svg?style=flat-square)](https://www.npmjs.org/package/react-codecopy)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-> "Copy to clipboard button" for your code snippets. Inspired in [codecopy](https://github.com/zenorocha/codecopy).
+> "Copy to clipboard" button for your code snippets. Inspired in [codecopy](https://github.com/zenorocha/codecopy).
 
 
 ## Install
