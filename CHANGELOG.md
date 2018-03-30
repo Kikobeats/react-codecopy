@@ -1,3 +1,12 @@
+<a name="2.1.1"></a>
+## 2.1.1 (2018-03-30)
+
+* Fix pass text ([6cec4e0](https://github.com/Kikobeats/react-codecopy/commit/6cec4e0))
+* Update README.md ([37a5f8c](https://github.com/Kikobeats/react-codecopy/commit/37a5f8c))
+* Update README.md ([784a832](https://github.com/Kikobeats/react-codecopy/commit/784a832))
+
+
+
 <a name="2.1.0"></a>
 # 2.1.0 (2018-03-22)
 
