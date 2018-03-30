@@ -40,7 +40,7 @@ const CodeCopy = class extends Component {
 
   render () {
     const { isHover, label } = this.state
-    const { labels, theme, children } = this.props
+    const { labels, theme, children, text } = this.props
     const IconComponent = createClipboardIcon(this.props)
 
     return (
@@ -50,6 +50,7 @@ const CodeCopy = class extends Component {
           onMouseLeave={() => this.setState({ isHover: false })}
         >
           <CopyToClipboard
+            text={text}
             onCopy={() => this.setState({ label: labels.copied })}
           >
             <ClipboardButton

@@ -26,18 +26,22 @@ const Pre = styled.pre`
   ${props => (props.theme.black ? blackStyle : normalStyle)};
 `
 
-const CodeComponent = props => (
+const PreCode = props => (
   <Pre>
     <code {...props} />
   </Pre>
 )
 
-const createStory = ({ theme, ...props } = {}) => (
+const Code = ({ theme, ...props } = {}) => (
+  <CodeCopy theme={theme} text={props.children}>
+    <PreCode {...props} />
+  </CodeCopy>
+)
+
+const createStory = (props = {}) => (
   <div>
-    <CodeCopy theme={theme} {...props}>
-      <CodeComponent theme={theme}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
-<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</CodeComponent>
-    </CodeCopy>
+    <Code {...props}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
+<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</Code>
     <p
       style={{
         textAlign: 'center',
