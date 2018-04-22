@@ -26,12 +26,23 @@ $ npm install react-codecopy --save
 ```jsx
 import CodeCopy from 'react-codecopy'
 
-<CodeCopy>
-  <pre>
-    <code>{`<!-- Microlink SDK Vanilla/UMD bundle -->
-<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</code>
-  </pre>
-</CodeCopy>
+const PreCode = props => (
+  <Pre>
+    <code {...props} />
+  </Pre>
+)
+
+const Code = ({ theme, ...props } = {}) => (
+  <CodeCopy theme={theme} text={props.children}>
+    <PreCode {...props} />
+  </CodeCopy>
+)
+
+return (
+  <Code {...props}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
+  <script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}
+  </Code>
+)
 ```
 
 Additionally you can specify `iconComponent`.
