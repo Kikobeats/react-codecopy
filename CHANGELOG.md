@@ -1,3 +1,11 @@
+<a name="2.1.2"></a>
+## 2.1.2 (2018-04-26)
+
+* Add better browser targets ([4af40a6](https://github.com/Kikobeats/react-codecopy/commit/4af40a6))
+* Update ([4ae06f5](https://github.com/Kikobeats/react-codecopy/commit/4ae06f5))
+
+
+
 <a name="2.1.1"></a>
 ## 2.1.1 (2018-03-30)
 
