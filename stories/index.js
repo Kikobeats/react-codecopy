@@ -32,8 +32,8 @@ const PreCode = props => (
   </Pre>
 )
 
-const Code = ({ theme, ...props } = {}) => (
-  <CodeCopy theme={theme} text={props.children}>
+const Code = ({ theme, codeCopyProps, ...props } = {}) => (
+  <CodeCopy theme={theme} text={props.children} {...codeCopyProps}>
     <PreCode {...props} />
   </CodeCopy>
 )
@@ -75,6 +75,15 @@ storiesOf('CodeCopy', module)
       labels: {
         copy: 'click to copy',
         copied: 'copied, yay!'
+      }
+    })
+  )
+  .add('custom style', () =>
+    createStory({
+      codeCopyProps: {
+        style: {
+          left: '6px'
+        }
       }
     })
   )
