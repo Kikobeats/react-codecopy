@@ -1,3 +1,11 @@
+<a name="2.1.3"></a>
+## 2.1.3 (2018-05-31)
+
+* Being possible passing custom style ([d02f57f](https://github.com/Kikobeats/react-codecopy/commit/d02f57f))
+* chore(package): update styled-components to version 3.3.0 ([9172437](https://github.com/Kikobeats/react-codecopy/commit/9172437))
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2 (2018-04-26)
 
