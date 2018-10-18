@@ -1,3 +1,12 @@
+<a name="2.1.4"></a>
+## 2.1.4 (2018-10-18)
+
+* chore(package): update styled-components to version 3.4.0 ([7e53e5f](https://github.com/Kikobeats/react-codecopy/commit/7e53e5f))
+* chore(package): update styled-components to version 4.0.0 ([3e0f0e1](https://github.com/Kikobeats/react-codecopy/commit/3e0f0e1))
+* Update package.json ([a1e7ef1](https://github.com/Kikobeats/react-codecopy/commit/a1e7ef1))
+
+
+
 <a name="2.1.3"></a>
 ## 2.1.3 (2018-05-31)
 
