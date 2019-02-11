@@ -1,3 +1,13 @@
+<a name="2.2.0"></a>
+# 2.2.0 (2019-02-11)
+
+* build: migrate husky ([e178450](https://github.com/Kikobeats/react-codecopy/commit/e178450))
+* build: update dependencies ([ec2553e](https://github.com/Kikobeats/react-codecopy/commit/ec2553e))
+* feat: add `active` flag prop ([dfde412](https://github.com/Kikobeats/react-codecopy/commit/dfde412))
+* chore(package): update styled-components to version 4.1.0 ([b3318f7](https://github.com/Kikobeats/react-codecopy/commit/b3318f7))
+
+
+
 <a name="2.1.4"></a>
 ## 2.1.4 (2018-10-18)
 
