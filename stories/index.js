@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components'
 import CodeCopy from '../src'
 
 const normalStyle = css`
-  background: #fafbfc;
+  background: rgba(27, 31, 35, 0.05);
   color: #4a4c4b;
 `
 

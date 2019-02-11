@@ -15,8 +15,6 @@ export default styled.button`
     color: ${button.color};
     background-color: ${button.bg};
     background-image: ${button.bgImage};
-    background-position: -0.5em;
-
     position: absolute;
     display: inline-block;
     right: 6px;
@@ -32,10 +30,12 @@ export default styled.button`
     background-repeat: repeat-x;
     background-position: -1px -1px;
     background-size: 110% 110%;
-    border: ${button.border};
+    border-width: 1px;
+    border-style: solid;
     border-radius: 0.25em;
+    border-color: ${button.border};
 
-    box-shadow: none;
+    box-shadow: ${button.boxShadow};
     min-height: initial;
     transition: opacity 0.3s ease-in-out;
     opacity: ${props => (props.isHover ? '1' : '0')};
@@ -48,16 +48,16 @@ export default styled.button`
     &:hover {
       background-color: ${button.hover.bg};
       background-image: ${button.hover.bgImage};
-      background-position: ${button.hover.bgPosition};
       border-color: ${button.hover.border};
-      box-shadow: none;
+      box-shadow: ${button.hover.boxShadow};
+      background-position: -0.5em;
     }
 
     &:active {
       background-color: ${button.active.bg};
-      background-image: none;
-      box-shadow: none;
+      background-image: ${button.active.bgImage};
       border-color: ${button.active.border};
+      box-shadow: ${button.active.boxShadow};
     }
 
     &::before {

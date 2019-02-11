@@ -3,9 +3,8 @@ const LIGHT = {
     color: '#24292e',
     bg: '#eff3f6',
     bgImage: 'linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)',
-    border: '1px solid rgba(27, 31, 35, 0.2)',
+    border: 'rgba(27, 31, 35, 0.2)',
     boxShadow: 'none',
-    bgPosition: '-0.5em',
     hover: {
       bg: '#e6ebf1',
       bgImage:
@@ -16,7 +15,7 @@ const LIGHT = {
       bg: '#e9ecef',
       bgImage: 'none',
       border: 'rgba(27, 31, 35, 0.35)',
-      boxShadow: 'inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15)'
+      boxShadow: 'rgba(27, 31, 35, 0.15) 0px 0.15em 0.3em inset'
     }
   },
   tooltip: {
@@ -30,17 +29,18 @@ const DARK = {
     color: '#fff',
     bg: '#24292e',
     bgImage: 'linear-gradient(-180deg, #3b424a 0%, #24292e 90%)',
-    border: '1px solid rgba(27, 31, 35, 0.2)',
-    bgPosition: '-1px -1px',
+    border: 'rgba(27, 31, 35, 0.2)',
+    boxShadow: 'none',
     hover: {
       bg: '#1f2428',
       bgImage: 'linear-gradient(-180deg, #333b42 0%, #1f2428 90%)',
-      border: '1px solid rgba(27, 31, 35, 0.5)',
-      bgPosition: '-0.5em'
+      border: 'rgba(27, 31, 35, 0.5)',
+      boxShadow: 'none'
     },
     active: {
       bg: '#202428',
-      border: '1px solid rgba(27, 31, 35, 0.5)',
+      border: 'rgba(27, 31, 35, 0.5)',
+      bgImage: 'none',
       boxShadow: 'inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15)'
     }
   },
