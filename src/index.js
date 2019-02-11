@@ -33,15 +33,15 @@ const CodeCopy = class extends Component {
     super(props)
 
     this.state = {
-      isHover: false,
+      isHover: props.active,
       label: props.labels.copy
     }
   }
 
   render () {
     const { isHover, label } = this.state
-    const { labels, theme, children, text, ...props } = this.props
     const IconComponent = createClipboardIcon(this.props)
+    const { labels, theme, children, text, ...props } = this.props
 
     return (
       <ThemeProvider theme={getTheme(theme)}>
@@ -71,6 +71,8 @@ const CodeCopy = class extends Component {
 
 CodeCopy.defaultProps = {
   iconComponent: ClipboardIcon,
+  active: false,
+  theme: 'light',
   labels: {
     copy: 'Copy to clipboard',
     copied: 'Copied!'

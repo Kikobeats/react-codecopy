@@ -32,9 +32,9 @@ const PreCode = props => (
   </Pre>
 )
 
-const Code = ({ theme, codeCopyProps, ...props } = {}) => (
-  <CodeCopy theme={theme} text={props.children} {...codeCopyProps}>
-    <PreCode {...props} />
+const Code = ({ children, ...props } = {}) => (
+  <CodeCopy active text={props.children} {...props}>
+    <PreCode children={children} />
   </CodeCopy>
 )
 
@@ -57,16 +57,28 @@ const createStory = (props = {}) => (
         style={{ color: '#0366d6' }}
       >
         GitHub
-      </a>.
+      </a>
+      .
     </p>
   </div>
 )
 
 storiesOf('CodeCopy', module)
   .addDecorator(centered)
-  .add('default', () => createStory())
+  .add('light', () => createStory())
+  .add('black', () =>
+    createStory({
+      theme: 'dark'
+    })
+  )
   .add('custom icon', () =>
     createStory({
+      iconComponent: props => <Copy size={16} {...props} />
+    })
+  )
+  .add('custom icon + dark', () =>
+    createStory({
+      theme: 'dark',
       iconComponent: props => <Copy size={16} {...props} />
     })
   )
@@ -85,10 +97,5 @@ storiesOf('CodeCopy', module)
           left: '6px'
         }
       }
-    })
-  )
-  .add('black theme', () =>
-    createStory({
-      theme: 'dark'
     })
   )
