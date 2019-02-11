@@ -56,7 +56,7 @@
     "react-feather": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "styled-components": "~4.1.0"
+    "styled-components": "~4.1.3"
   },
   "engines": {
     "node": ">= 8"
