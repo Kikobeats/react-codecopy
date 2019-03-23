@@ -33,7 +33,7 @@ const CodeCopy = class extends Component {
     super(props)
 
     this.state = {
-      isHover: props.active,
+      isHover: props.interactive,
       label: props.labels.copy
     }
   }
@@ -41,13 +41,19 @@ const CodeCopy = class extends Component {
   render () {
     const { isHover, label } = this.state
     const IconComponent = createClipboardIcon(this.props)
-    const { labels, theme, children, text, ...props } = this.props
+    const { labels, theme, children, text, interactive, ...props } = this.props
+    const onMouseEnter = !interactive
+      ? () => this.setState({ isHover: true })
+      : null
+    const onMouseLeave = !interactive
+      ? () => this.setState({ isHover: false })
+      : null
 
     return (
       <ThemeProvider theme={getTheme(theme)}>
         <ClipboardWrapper
-          onMouseEnter={() => this.setState({ isHover: true })}
-          onMouseLeave={() => this.setState({ isHover: false })}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
         >
           <CopyToClipboard
             text={text}
@@ -71,7 +77,7 @@ const CodeCopy = class extends Component {
 
 CodeCopy.defaultProps = {
   iconComponent: ClipboardIcon,
-  active: false,
+  interactive: false,
   theme: 'light',
   labels: {
     copy: 'Copy to clipboard',

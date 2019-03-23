@@ -71,6 +71,11 @@ storiesOf('CodeCopy', module)
       theme: 'dark'
     })
   )
+  .add('interactive', () =>
+    createStory({
+      interactive: true
+    })
+  )
   .add('custom icon', () =>
     createStory({
       iconComponent: props => <Copy size={16} {...props} />
