@@ -1,3 +1,15 @@
+<a name="3.0.0"></a>
+# 3.0.0 (2019-03-23)
+
+* feat: rename interactive into active ([e7bc621](https://github.com/Kikobeats/react-codecopy/commit/e7bc621))
+* fix: improve theme ([3e0bc8c](https://github.com/Kikobeats/react-codecopy/commit/3e0bc8c))
+
+
+### BREAKING CHANGE
+
+* active no more supported
+
+
 <a name="2.2.0"></a>
 # 2.2.0 (2019-02-11)
 
