@@ -29,26 +29,21 @@ const ClipboardWrapper = styled.div`
 `
 
 function CodeCopy (props) {
-  const [{ isHover, label }, setState] = useState({
-    isHover: props.interactive,
-    label: props.labels.copy
-  })
-
+  const [isHover, setHover] = useState(props.interactive)
+  const [label, setLabel] = useState(props.labels.copy)
   const IconComponent = createClipboardIcon(props)
   const { labels, theme, children, text, interactive, ...restProps } = props
-  const onMouseEnter = () => setState({ isHover: true })
-  const onMouseLeave = () => setState({ isHover: false })
-
-  const hover = isHover || props.interactive
+  const onMouseEnter = () => setHover(true)
+  const onMouseLeave = () => setHover(false)
 
   return (
     <ThemeProvider theme={getTheme(theme)}>
       <ClipboardWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <CopyToClipboard text={text} onCopy={() => setState({ label: labels.copied })}>
+        <CopyToClipboard text={text} onCopy={() => setLabel(labels.copied)}>
           <ClipboardButton
-            isHover={hover}
+            isHover={isHover || props.interactive}
             aria-label={label}
-            onMouseLeave={() => setState({ label: labels.copy })}
+            onMouseLeave={() => setLabel(labels.copy)}
             {...restProps}
           >
             <IconComponent />
