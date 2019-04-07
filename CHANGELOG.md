@@ -1,3 +1,10 @@
+<a name="4.0.1"></a>
+## 4.0.1 (2019-04-07)
+
+* build: add missing bundle dependencies ([669753c](https://github.com/Kikobeats/react-codecopy/commit/669753c))
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0 (2019-04-07)
 
