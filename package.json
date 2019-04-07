@@ -30,6 +30,8 @@
     "react-copy-to-clipboard": "~5.0.1"
   },
   "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
     "@babel/plugin-proposal-object-rest-spread": "latest",
     "@babel/plugin-transform-react-constant-elements": "latest",
     "@babel/plugin-transform-react-inline-elements": "latest",
@@ -38,7 +40,6 @@
     "@storybook/addon-centered": "latest",
     "@storybook/addon-options": "latest",
     "@storybook/react": "latest",
-    "babel-cli": "latest",
     "babel-eslint": "latest",
     "babel-plugin-transform-react-remove-prop-types": "latest",
     "eslint-plugin-jsx-a11y": "latest",
