@@ -1,3 +1,14 @@
+<a name="4.0.0"></a>
+# 4.0.0 (2019-04-07)
+
+* fix: linter ([ed31cea](https://github.com/Kikobeats/react-codecopy/commit/ed31cea))
+* fix: separate label state ([e430505](https://github.com/Kikobeats/react-codecopy/commit/e430505))
+* refactor: rewrite stories ([e19ef39](https://github.com/Kikobeats/react-codecopy/commit/e19ef39))
+* build: rewrite into hooks ([869a39d](https://github.com/Kikobeats/react-codecopy/commit/869a39d))
+* chore(package): update styled-components to version 4.2.0 ([a4a0bf0](https://github.com/Kikobeats/react-codecopy/commit/a4a0bf0))
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0 (2019-03-23)
 
