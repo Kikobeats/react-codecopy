@@ -30,19 +30,17 @@
     "react-copy-to-clipboard": "~5.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "latest",
+    "@babel/plugin-transform-react-constant-elements": "latest",
+    "@babel/plugin-transform-react-inline-elements": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
     "@storybook/addon-centered": "latest",
     "@storybook/addon-options": "latest",
     "@storybook/react": "latest",
     "babel-cli": "latest",
     "babel-eslint": "latest",
-    "babel-plugin-transform-class-properties": "latest",
-    "babel-plugin-transform-object-rest-spread": "latest",
-    "babel-plugin-transform-react-constant-elements": "latest",
-    "babel-plugin-transform-react-inline-elements": "latest",
-    "babel-plugin-transform-react-pure-class-to-function": "latest",
     "babel-plugin-transform-react-remove-prop-types": "latest",
-    "babel-preset-env": "latest",
-    "babel-preset-react": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "finepack": "latest",
     "husky": "latest",
@@ -56,7 +54,7 @@
     "react-feather": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "styled-components": "~4.2.0"
+    "styled-components": "latest"
   },
   "engines": {
     "node": ">= 8"

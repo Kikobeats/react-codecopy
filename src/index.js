@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import styled, { ThemeProvider, css } from 'styled-components'
@@ -28,51 +28,36 @@ const ClipboardWrapper = styled.div`
   overflow: visible;
 `
 
-const CodeCopy = class extends Component {
-  constructor (props) {
-    super(props)
+function CodeCopy (props) {
+  const [{ isHover, label }, setState] = useState({
+    isHover: props.interactive,
+    label: props.labels.copy
+  })
 
-    this.state = {
-      isHover: props.interactive,
-      label: props.labels.copy
-    }
-  }
+  const IconComponent = createClipboardIcon(props)
+  const { labels, theme, children, text, interactive, ...restProps } = props
+  const onMouseEnter = () => setState({ isHover: true })
+  const onMouseLeave = () => setState({ isHover: false })
 
-  render () {
-    const { isHover, label } = this.state
-    const IconComponent = createClipboardIcon(this.props)
-    const { labels, theme, children, text, interactive, ...props } = this.props
-    const onMouseEnter = !interactive
-      ? () => this.setState({ isHover: true })
-      : null
-    const onMouseLeave = !interactive
-      ? () => this.setState({ isHover: false })
-      : null
+  const hover = isHover || props.interactive
 
-    return (
-      <ThemeProvider theme={getTheme(theme)}>
-        <ClipboardWrapper
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
-          <CopyToClipboard
-            text={text}
-            onCopy={() => this.setState({ label: labels.copied })}
+  return (
+    <ThemeProvider theme={getTheme(theme)}>
+      <ClipboardWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <CopyToClipboard text={text} onCopy={() => setState({ label: labels.copied })}>
+          <ClipboardButton
+            isHover={hover}
+            aria-label={label}
+            onMouseLeave={() => setState({ label: labels.copy })}
+            {...restProps}
           >
-            <ClipboardButton
-              isHover={isHover}
-              aria-label={label}
-              onMouseLeave={() => this.setState({ label: labels.copy })}
-              {...props}
-            >
-              <IconComponent />
-            </ClipboardButton>
-          </CopyToClipboard>
-          {children}
-        </ClipboardWrapper>
-      </ThemeProvider>
-    )
-  }
+            <IconComponent />
+          </ClipboardButton>
+        </CopyToClipboard>
+        {children}
+      </ClipboardWrapper>
+    </ThemeProvider>
+  )
 }
 
 CodeCopy.defaultProps = {
