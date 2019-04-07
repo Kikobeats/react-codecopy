@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import centered from '@storybook/addon-centered'
 import { Copy } from 'react-feather'
@@ -38,69 +38,71 @@ const Code = ({ children, ...props } = {}) => (
   </CodeCopy>
 )
 
-const createStory = (props = {}) => (
-  <div>
-    <Code {...props}>{`<!-- Microlink SDK Vanilla/UMD bundle -->
+class Story extends React.Component {
+  constructor (props) {
+    super(props)
+    this.onEnable = this.onEnable.bind(this)
+    this.onDisable = this.onDisable.bind(this)
+    this.state = { interactive: this.props.interactive }
+  }
+
+  onEnable () {
+    this.setState({ interactive: true })
+  }
+
+  onDisable () {
+    this.setState({ interactive: false })
+  }
+
+  render () {
+    return (
+      <div>
+        <button onClick={this.onEnable}>enable</button>
+        <button onClick={this.onDisable}>disable</button>
+        <Code
+          {...this.props}
+          interactive={this.state.interactive}
+        >{`<!-- Microlink SDK Vanilla/UMD bundle -->
 <script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</Code>
-    <p
-      style={{
-        textAlign: 'center',
-        fontFamily: 'helvetica, sans-serif',
-        paddingTop: '1rem',
-        fontSize: '16px'
-      }}
-    >
-      Hover the text to copy it. See on{' '}
-      <a
-        target='_blank'
-        href='https://github.com/Kikobeats/react-codecopy'
-        style={{ color: '#0366d6' }}
-      >
-        GitHub
-      </a>
-      .
-    </p>
-  </div>
-)
+        <p
+          style={{
+            textAlign: 'center',
+            fontFamily: 'helvetica, sans-serif',
+            paddingTop: '1rem',
+            fontSize: '16px'
+          }}
+        >
+          Hover the text to copy it. See on{' '}
+          <a
+            target='_blank'
+            href='https://github.com/Kikobeats/react-codecopy'
+            style={{ color: '#0366d6' }}
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
+    )
+  }
+}
 
 storiesOf('CodeCopy', module)
   .addDecorator(centered)
-  .add('light', () => createStory())
-  .add('black', () =>
-    createStory({
-      theme: 'dark'
-    })
-  )
-  .add('interactive', () =>
-    createStory({
-      interactive: true
-    })
-  )
-  .add('custom icon', () =>
-    createStory({
-      iconComponent: props => <Copy size={16} {...props} />
-    })
-  )
-  .add('custom icon + dark', () =>
-    createStory({
-      theme: 'dark',
-      iconComponent: props => <Copy size={16} {...props} />
-    })
-  )
-  .add('custom labels', () =>
-    createStory({
-      labels: {
-        copy: 'click to copy',
-        copied: 'copied, yay!'
-      }
-    })
-  )
-  .add('custom style', () =>
-    createStory({
-      codeCopyProps: {
+  .add('light', () => <Story />)
+  .add('dark', () => <Story theme='dark' />)
+  .add('interactive', () => <Story interactive='true' />)
+  .add('custom icon', () => <Story iconComponent={props => <Copy size={16} {...props} />} />)
+  .add('custom icon + dark', () => (
+    <Story theme='dark' iconComponent={props => <Copy size={16} {...props} />} />
+  ))
+  .add('custom labels', () => <Story labels={{ copy: 'click to copy', copied: 'copied, yay!' }} />)
+  .add('custom style', () => (
+    <Story
+      codeCopyProps={{
         style: {
           left: '6px'
         }
-      }
-    })
-  )
+      }}
+    />
+  ))
