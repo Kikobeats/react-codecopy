@@ -41,8 +41,8 @@ const Code = ({ children, ...props } = {}) => (
 class Story extends React.Component {
   constructor (props) {
     super(props)
-    this.onEnable = this.onEnable.bind(this)
-    this.onDisable = this.onDisable.bind(this)
+    this.handleEnable = this.handleEnable.bind(this)
+    this.handleDisable = this.handleDisable.bind(this)
     this.state = { interactive: this.props.interactive }
   }
 
