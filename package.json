@@ -1,7 +1,7 @@
 {
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
-  "homepage": "https://documentup.com/Kikobeats/react-codecopy",
+  "homepage": "https://nicedoc.io/Kikobeats/react-codecopy",
   "version": "4.0.1",
   "main": "lib/index.js",
   "module": "lib/index.m.js",
@@ -27,7 +27,7 @@
     "snippet"
   ],
   "dependencies": {
-    "react-copy-to-clipboard": "~5.0.1"
+    "react-copy-to-clipboard": "~5.0.2"
   },
   "devDependencies": {
     "@babel/cli": "latest",
@@ -94,7 +94,7 @@
   },
   "peerDependencies": {
     "react": ">= 16 < 17",
-    "styled-components": ">= 3"
+    "styled-components": ">=5"
   },
   "standard": {
     "ignore": [
