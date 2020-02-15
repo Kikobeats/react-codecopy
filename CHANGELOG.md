@@ -1,3 +1,14 @@
+## 4.1.0 (2020-02-15)
+
+* fix: avoid create component dynamically ([c416adc](https://github.com/Kikobeats/react-codecopy/commit/c416adc))
+* fix: linter ([e9b74f9](https://github.com/Kikobeats/react-codecopy/commit/e9b74f9))
+* feat: add relevant class names ([3fc6416](https://github.com/Kikobeats/react-codecopy/commit/3fc6416))
+* build: improve bundle ([4f3969e](https://github.com/Kikobeats/react-codecopy/commit/4f3969e))
+* build: remove git add from git pre hooks ([3677400](https://github.com/Kikobeats/react-codecopy/commit/3677400))
+* build: update dependencies ([bec0f9f](https://github.com/Kikobeats/react-codecopy/commit/bec0f9f))
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1 (2019-04-07)
 
