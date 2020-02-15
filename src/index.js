@@ -7,7 +7,7 @@ import ClipboardButton from './button'
 import ClipboardIcon from './icon'
 import getTheme from './theme'
 
-const svgStyle = ({ theme }) => css`
+export const svgStyle = css`
   border-radius: 0;
   margin-top: -3px;
   position: relative;
@@ -15,23 +15,21 @@ const svgStyle = ({ theme }) => css`
   padding: 0;
   vertical-align: initial;
   min-height: initial;
-  ${theme === 'dark' && `fill: white;`};
+  ${({ theme }) => theme === 'dark' && `fill: white;`};
 `
 
-const createClipboardIcon = ({ theme, iconComponent }) =>
-  styled(iconComponent)`
-    ${svgStyle({ theme })};
-  `
+const ClipboardIconComponent = styled(ClipboardIcon)`
+  ${svgStyle};
+`
 
 const ClipboardWrapper = styled.div`
   position: relative;
   overflow: visible;
 `
 
-function CodeCopy (props) {
+const CodeCopy = ({ iconComponent: IconComponent, ...props }) => {
   const [isHover, setHover] = useState(props.interactive)
   const [label, setLabel] = useState(props.labels.copy)
-  const IconComponent = createClipboardIcon(props)
   const { labels, theme, children, text, interactive, ...restProps } = props
   const onMouseEnter = () => setHover(true)
   const onMouseLeave = () => setHover(false)
@@ -54,7 +52,7 @@ function CodeCopy (props) {
             onMouseLeave={() => setLabel(labels.copy)}
             {...restProps}
           >
-            <IconComponent />
+            <IconComponent theme={theme} />
           </ClipboardButton>
         </CopyToClipboard>
         {children}
@@ -64,7 +62,7 @@ function CodeCopy (props) {
 }
 
 CodeCopy.defaultProps = {
-  iconComponent: ClipboardIcon,
+  iconComponent: ClipboardIconComponent,
   interactive: false,
   theme: 'light',
   labels: {
