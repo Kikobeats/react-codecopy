@@ -15,7 +15,7 @@ export const svgStyle = css`
   padding: 0;
   vertical-align: initial;
   min-height: initial;
-  ${({ theme }) => theme === 'dark' && `fill: white;`};
+  ${({ theme }) => theme === 'dark' && 'fill: white;'};
 `
 
 const ClipboardIconComponent = styled(ClipboardIcon)`

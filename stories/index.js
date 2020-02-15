@@ -46,24 +46,25 @@ class Story extends React.Component {
     this.state = { interactive: this.props.interactive }
   }
 
-  onEnable () {
+  handleEnable () {
     this.setState({ interactive: true })
   }
 
-  onDisable () {
+  handleDisable () {
     this.setState({ interactive: false })
   }
 
   render () {
     return (
       <div>
-        <button onClick={this.onEnable}>enable</button>
-        <button onClick={this.onDisable}>disable</button>
+        <button onClick={this.handleEnable}>enable</button>
+        <button onClick={this.handleDisable}>disable</button>
         <Code
           {...this.props}
           interactive={this.state.interactive}
-        >{`<!-- Microlink SDK Vanilla/UMD bundle -->
-<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}</Code>
+          children={`<!-- Microlink SDK Vanilla/UMD bundle -->
+<script src="//cdn.jsdelivr.net/npm/microlinkjs@latest/umd/microlink.min.js"></script>`}
+        />
         <p
           style={{
             textAlign: 'center',
@@ -75,6 +76,7 @@ class Story extends React.Component {
           Hover the text to copy it. See on{' '}
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href='https://github.com/Kikobeats/react-codecopy'
             style={{ color: '#0366d6' }}
           >
