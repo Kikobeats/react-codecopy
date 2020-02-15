@@ -38,8 +38,16 @@ function CodeCopy (props) {
 
   return (
     <ThemeProvider theme={getTheme(theme)}>
-      <ClipboardWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <CopyToClipboard text={text} onCopy={() => setLabel(labels.copied)}>
+      <ClipboardWrapper
+        className='codecopy_wrapper'
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        <CopyToClipboard
+          className='codecopy_button'
+          text={text}
+          onCopy={() => setLabel(labels.copied)}
+        >
           <ClipboardButton
             isHover={isHover || props.interactive}
             aria-label={label}
