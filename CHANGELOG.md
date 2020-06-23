@@ -1,3 +1,10 @@
+## 4.2.0 (2020-06-23)
+
+* refactor: Update `clipboard` icon ([4be286c](https://github.com/Kikobeats/react-codecopy/commit/4be286c))
+* fix: storybook ([d63472f](https://github.com/Kikobeats/react-codecopy/commit/d63472f))
+
+
+
 ## 4.1.0 (2020-02-15)
 
 * fix: avoid create component dynamically ([c416adc](https://github.com/Kikobeats/react-codecopy/commit/c416adc))
