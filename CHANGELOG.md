@@ -1,3 +1,9 @@
+## <small>4.2.1 (2020-06-29)</small>
+
+* Update index.js ([810d067](https://github.com/Kikobeats/react-codecopy/commit/810d067))
+
+
+
 ## 4.2.0 (2020-06-23)
 
 * refactor: Update `clipboard` icon ([4be286c](https://github.com/Kikobeats/react-codecopy/commit/4be286c))
