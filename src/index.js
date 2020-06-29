@@ -11,7 +11,7 @@ export const svgStyle = css`
   border-radius: 0;
   margin-top: -3px;
   position: relative;
-  top: 2px;
+  top: 4px;
   padding: 0;
   vertical-align: initial;
   min-height: initial;
