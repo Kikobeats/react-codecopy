@@ -27,7 +27,7 @@
     "snippet"
   ],
   "dependencies": {
-    "react-copy-to-clipboard": "~5.0.2"
+    "react-copy-to-clipboard": "~5.1.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "latest",
