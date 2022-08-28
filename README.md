@@ -5,11 +5,7 @@
 </p>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/react-codecopy.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/Kikobeats/react-codecopy/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/react-codecopy)
-[![Dependency status](https://img.shields.io/david/Kikobeats/react-codecopy.svg?style=flat-square)](https://david-dm.org/Kikobeats/react-codecopy)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/react-codecopy.svg?style=flat-square)](https://david-dm.org/Kikobeats/react-codecopy#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/react-codecopy.svg?style=flat-square)](https://www.npmjs.org/package/react-codecopy)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
 > "Copy to clipboard" button for your code snippets. Inspired in [codecopy](https://github.com/zenorocha/codecopy).
 
@@ -21,7 +17,6 @@ $ npm install react-codecopy --save
 ```
 
 ## Usage
-
 
 ```jsx
 import CodeCopy from 'react-codecopy'
@@ -45,7 +40,46 @@ return (
 )
 ```
 
-Additionally you can specify `iconComponent`.
+## API
+
+### CodeCopy([options])
+
+#### options
+
+##### iconComponent
+
+Type: `component`</br>
+Default: `ClipboardIcon`
+
+The clipboard icont to use.
+
+##### text
+
+Type: `string`</br>
+
+The text to be copied.
+
+##### onCopy
+
+Type: `function`
+
+A function to be called after text is being copied to the clipboard.
+
+##### copy
+
+Type: `function`</br>
+Default: `text => navigator.clipboard.writeText(text)`
+
+The clipboard method to delegate into the copy action.
+
+In case you need to support old browser, consider to call [copee](https://github.com/styfle/copee).
+
+##### theme
+
+Type: `string`</br>
+Default: `light`
+
+It determines the theme to be used, being possible `'light'` and `'dark'`.
 
 ## Related
 
