@@ -27,21 +27,26 @@
     "snippet"
   ],
   "devDependencies": {
+    "@babel/eslint-parser": "latest",
     "@babel/plugin-transform-react-constant-elements": "latest",
     "@babel/plugin-transform-runtime": "latest",
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
     "@rollup/plugin-babel": "latest",
     "@storybook/addon-a11y": "latest",
     "@storybook/addon-centered": "latest",
     "@storybook/addon-essentials": "latest",
     "@storybook/react": "latest",
-    "babel-eslint": "latest",
     "babel-loader": "latest",
     "babel-plugin-transform-react-pure-class-to-function": "latest",
     "babel-plugin-transform-react-remove-prop-types": "latest",
+    "ci-publish": "latest",
+    "conventional-github-releaser": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "finepack": "latest",
+    "git-authors-cli": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
@@ -58,6 +63,7 @@
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
+    "standard-version": "latest",
     "styled-components": "latest"
   },
   "engines": {
@@ -69,14 +75,27 @@
   "scripts": {
     "build": "NODE_ENV=production rollup -c rollup.config.js",
     "build-storybook": "NODE_ENV=production build-storybook",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "dev": "start-storybook -p 6006",
     "lint": "standard-markdown README.md && standard",
+    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "prepublishOnly": "npm run build",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
+    "release": "standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
     "start": "node scripts/start.js",
-    "test": "exit 0"
+    "test": "exit 0",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "nano-staged": {
     "*.js": [
       "prettier-standard"
@@ -90,13 +109,14 @@
     "styled-components": ">=5"
   },
   "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
     "pre-commit": "npx nano-staged"
   },
   "standard": {
     "ignore": [
       "/lib/"
     ],
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [
       "jsx-a11y"
     ]
