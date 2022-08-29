@@ -10,6 +10,12 @@
     "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
+  "contributors": [
+    {
+      "name": "John Letey",
+      "email": "johnletey@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/react-codecopy.git"
