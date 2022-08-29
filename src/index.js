@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import styled, { ThemeProvider, css } from 'styled-components'
 
@@ -27,7 +26,9 @@ const ClipboardWrapper = styled.div`
   overflow: visible;
 `
 
-const CodeCopy = ({ iconComponent: IconComponent, ...props }) => {
+const native = text => navigator.clipboard.writeText(text)
+
+const CodeCopy = ({ iconComponent: IconComponent, copy = native, onCopy, ...props }) => {
   const [isHover, setHover] = useState(props.interactive)
   const [label, setLabel] = useState(props.labels.copy)
   const { labels, theme, children, text, interactive, ...restProps } = props
@@ -37,24 +38,20 @@ const CodeCopy = ({ iconComponent: IconComponent, ...props }) => {
   return (
     <ThemeProvider theme={getTheme(theme)}>
       <ClipboardWrapper
-        className='codecopy_wrapper'
+        className='codecopy__wrapper'
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <CopyToClipboard
-          className='codecopy_button'
-          text={text}
-          onCopy={() => setLabel(labels.copied)}
+        <ClipboardButton
+          className={`codecopy__button codecopy__button__${theme}`}
+          isHover={isHover || props.interactive}
+          aria-label={label}
+          onMouseLeave={() => setLabel(labels.copy)}
+          onClick={() => copy(text).then(() => setLabel(labels.copied))}
+          {...restProps}
         >
-          <ClipboardButton
-            isHover={isHover || props.interactive}
-            aria-label={label}
-            onMouseLeave={() => setLabel(labels.copy)}
-            {...restProps}
-          >
-            <IconComponent theme={theme} />
-          </ClipboardButton>
-        </CopyToClipboard>
+          <IconComponent className='codecopy__icon' />
+        </ClipboardButton>
         {children}
       </ClipboardWrapper>
     </ThemeProvider>
