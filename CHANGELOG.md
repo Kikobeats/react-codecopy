@@ -1,8 +1,29 @@
-## <small>4.2.1 (2020-06-29)</small>
+# Changelog
 
-* Update index.js ([810d067](https://github.com/Kikobeats/react-codecopy/commit/810d067))
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 5.0.0 (2022-08-29)
 
 
+### ⚠ BREAKING CHANGES
+
+* active no more supported
+
+### Features
+
+* add `active` flag prop ([dfde412](https://github.com/Kikobeats/react-codecopy/commit/dfde4127829ee3a8ad3cb8ea6cda5f13570f135d))
+* add relevant class names ([3fc6416](https://github.com/Kikobeats/react-codecopy/commit/3fc6416a93e877c9b57c0248b8e12b707a050f80))
+* rename interactive into active ([e7bc621](https://github.com/Kikobeats/react-codecopy/commit/e7bc621e1a9b544208a561d87b878e41c4f0bd5e))
+
+
+### Bug Fixes
+
+* avoid create component dynamically ([c416adc](https://github.com/Kikobeats/react-codecopy/commit/c416adc05cbb2198c280392d238300c2e044ff81))
+* improve theme ([3e0bc8c](https://github.com/Kikobeats/react-codecopy/commit/3e0bc8c9d1eeb64d5eec8146a72bd74c8c63848f))
+* linter ([e9b74f9](https://github.com/Kikobeats/react-codecopy/commit/e9b74f95fc7927becf6ab68f678b32cc531df674))
+* linter ([ed31cea](https://github.com/Kikobeats/react-codecopy/commit/ed31ceacb45216d14d6472c2c0fff552ff5489a4))
+* separate label state ([e430505](https://github.com/Kikobeats/react-codecopy/commit/e4305058e7fc4b6ba8e2414131442b992a82b7e3))
+* storybook ([d63472f](https://github.com/Kikobeats/react-codecopy/commit/d63472fde109e28d8de6b35d3d5c3d8b53b7ff3f))
 
 ## 4.2.0 (2020-06-23)
 
@@ -194,6 +215,3 @@
 * Update README.md ([4f1ca36](https://github.com/Kikobeats/react-codecopy/commit/4f1ca36))
 * Update README.md ([a9cd106](https://github.com/Kikobeats/react-codecopy/commit/a9cd106))
 * docs(readme): add Greenkeeper badge ([5a29a5e](https://github.com/Kikobeats/react-codecopy/commit/5a29a5e))
-
-
-
