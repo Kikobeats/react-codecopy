@@ -38,9 +38,11 @@
     "@babel/plugin-transform-runtime": "latest",
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
+    "@babel/runtime": "latest",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@rollup/plugin-babel": "latest",
+    "@rollup/plugin-terser": "latest",
     "@storybook/addon-a11y": "latest",
     "@storybook/addon-centered": "latest",
     "@storybook/addon-essentials": "latest",
@@ -64,7 +66,6 @@
     "rollup-plugin-babel": "latest",
     "rollup-plugin-filesize": "latest",
     "rollup-plugin-peer-deps-external": "latest",
-    "rollup-plugin-terser": "latest",
     "rollup-plugin-visualizer": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
@@ -79,7 +80,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "NODE_ENV=production rollup -c rollup.config.js",
+    "build": "NODE_ENV=production rollup -c rollup.config.js --bundleConfigAsCjs",
     "build-storybook": "NODE_ENV=production build-storybook",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "dev": "start-storybook -p 6006",
