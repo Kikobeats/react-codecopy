@@ -1,7 +1,7 @@
 import external from 'rollup-plugin-peer-deps-external'
-import visualizer from 'rollup-plugin-visualizer'
-import { terser } from 'rollup-plugin-terser'
+import { visualizer } from 'rollup-plugin-visualizer'
 import filesize from 'rollup-plugin-filesize'
+import terser from '@rollup/plugin-terser'
 import babel from '@rollup/plugin-babel'
 import fs from 'fs'
 
@@ -11,6 +11,7 @@ const babelRc = JSON.parse(fs.readFileSync('./.babelrc'))
 
 export default {
   input: 'src/index.js',
+  external: [/@babel\/runtime/],
   output: [
     {
       file: pkg.main,
