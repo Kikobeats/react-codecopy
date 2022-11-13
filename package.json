@@ -4,7 +4,7 @@
   "homepage": "https://nicedoc.io/Kikobeats/react-codecopy",
   "version": "5.0.0",
   "main": "dist/codecopy.js",
-  "module": "dist/codecopy.m.js",
+  "module": "dist/codecopy.mjs",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
