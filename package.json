@@ -2,7 +2,7 @@
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
   "homepage": "https://nicedoc.io/Kikobeats/react-codecopy",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "main": "dist/codecopy.js",
   "module": "dist/codecopy.mjs",
   "author": {
