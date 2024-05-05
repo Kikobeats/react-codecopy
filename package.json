@@ -1,7 +1,7 @@
 {
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
-  "homepage": "https://github.com/Kikobeats/react-codecopy",
+  "homepage": "https://react-codecopy.vercel.app",
   "version": "5.0.4",
   "main": "dist/codecopy.js",
   "module": "dist/codecopy.mjs",
