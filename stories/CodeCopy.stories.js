@@ -46,38 +46,15 @@ const Story = ({ interactive = false, ...props }) => {
 
   return (
     <div>
+      <button onClick={() => setIsInteractive(true)}>enable</button>
+      <button onClick={() => setIsInteractive(false)}>disable</button>
       <button
-        onClick={event => {
-          event.preventDefault()
-          setIsInteractive(true)
-        }}
-      >
-        enable
-      </button>
-      <button
-        onClick={event => {
-          event.preventDefault()
-          setIsInteractive(false)
-        }}
-      >
-        disable
-      </button>
-      <button
-        onClick={event => {
-          event.preventDefault()
-          navigator.clipboard.readText().then(text => window.alert(text || '(nothing)'))
-        }}
+        onClick={() =>
+          navigator.clipboard.readText().then(text => window.alert(text || '(nothing)'))}
       >
         show clibpoard
       </button>
-      <button
-        onClick={event => {
-          event.preventDefault()
-          navigator.clipboard.writeText('')
-        }}
-      >
-        clear clipboard
-      </button>
+      <button onClick={() => navigator.clipboard.writeText('')}>clear clipboard</button>
       <Code {...props} interactive={isInteractive}>
         {code}
       </Code>
