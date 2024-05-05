@@ -36,3 +36,5 @@ dist
 stats.html
 .vercel
 .envrc
+
+*storybook.log

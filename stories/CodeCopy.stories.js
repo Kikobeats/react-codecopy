@@ -1,6 +1,4 @@
-import centered from '@storybook/addon-centered/react'
 import styled, { css } from 'styled-components'
-import { storiesOf } from '@storybook/react'
 import React, { useState } from 'react'
 import { Copy } from 'react-feather'
 
@@ -106,22 +104,35 @@ const Story = ({ interactive = false, ...props }) => {
   )
 }
 
-storiesOf('CodeCopy', module)
-  .addDecorator(centered)
-  .add('light', () => <Story />)
-  .add('dark', () => <Story theme='dark' />)
-  .add('interactive', () => <Story interactive='true' />)
-  .add('custom icon', () => <Story iconComponent={props => <Copy size={16} {...props} />} />)
-  .add('custom icon + dark', () => (
-    <Story theme='dark' iconComponent={props => <Copy size={16} {...props} />} />
-  ))
-  .add('custom labels', () => <Story labels={{ copy: 'click to copy', copied: 'copied, yay!' }} />)
-  .add('custom style', () => (
+export default {
+  component: CodeCopy
+}
+
+export const light = { render: () => <Story /> }
+
+export const dark = { render: () => <Story theme='dark' /> }
+
+export const interactive = { render: () => <Story interactive /> }
+
+export const customIcon = {
+  render: () => <Story iconComponent={props => <Copy size={16} {...props} />} />
+}
+
+export const customIconAndDark = {
+  render: () => <Story theme='dark' iconComponent={props => <Copy size={16} {...props} />} />
+}
+
+export const customLabels = {
+  render: () => <Story labels={{ copy: 'click to copy', copied: 'copied, yay!' }} />
+}
+
+export const customStyle = {
+  render: () => (
     <Story
-      codeCopyProps={{
-        style: {
-          left: '6px'
-        }
+      style={{
+        left: '6px',
+        right: 'initial'
       }}
     />
-  ))
+  )
+}
