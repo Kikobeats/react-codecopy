@@ -1,7 +1,7 @@
 {
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
-  "homepage": "https://github.com/Kikobeats/react-codecopy",
+  "homepage": "https://react-codecopy.vercel.app",
   "version": "5.0.5",
   "main": "dist/codecopy.js",
   "module": "dist/codecopy.mjs",
@@ -121,7 +121,7 @@
   },
   "peerDependencies": {
     "react": ">= 16 < 19",
-    "styled-components": ">=5"
+    "styled-components": ">=5.1"
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",

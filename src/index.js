@@ -44,7 +44,7 @@ const CodeCopy = ({ iconComponent: IconComponent, copy = native, onCopy, ...prop
       >
         <ClipboardButton
           className={`codecopy__button codecopy__button__${theme}`}
-          isHover={isHover || props.interactive}
+          $isHover={isHover || props.interactive}
           aria-label={label}
           onMouseLeave={() => setLabel(labels.copy)}
           onClick={() => copy(text).then(() => setLabel(labels.copied))}

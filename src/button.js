@@ -38,7 +38,7 @@ export default styled.button`
     box-shadow: ${button.boxShadow};
     min-height: initial;
     transition: opacity 0.3s ease-in-out;
-    opacity: ${props => (props.isHover ? '1' : '0')};
+    opacity: ${props => (props.$isHover ? '1' : '0')};
     z-index: 1;
 
     &:focus {
@@ -83,9 +83,8 @@ export default styled.button`
       z-index: 1000000;
       display: none;
       padding: 0.5em 0.75em;
-      font: normal normal 11px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol';
+      font: normal normal 11px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
       -webkit-font-smoothing: subpixel-antialiased;
       color: ${tooltip.color};
       text-align: center;
