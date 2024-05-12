@@ -64,7 +64,6 @@
     "react-dom": "^18",
     "react-feather": "latest",
     "rollup": "latest",
-    "rollup-plugin-babel": "latest",
     "rollup-plugin-filesize": "latest",
     "rollup-plugin-peer-deps-external": "latest",
     "rollup-plugin-visualizer": "latest",
