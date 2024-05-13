@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 5.0.12 (2024-05-13)
+
+
+### Bug Fixes
+
+* migrate styled-components API ([6e8e5d3](https://github.com/Kikobeats/react-codecopy/commit/6e8e5d382e29304f2882247eae1a359396f2e254))
+
 ### [5.0.11](https://github.com/Kikobeats/react-codecopy/compare/v5.0.9...v5.0.11) (2024-05-12)
 
 ### 5.0.10 (2024-05-12)
