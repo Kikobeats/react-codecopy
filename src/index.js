@@ -21,7 +21,7 @@ const ClipboardIconComponent = styled(ClipboardIcon)`
   ${svgStyle};
 `
 
-const ClipboardWrapper = styled.div`
+const ClipboardWrapper = styled('div')`
   position: relative;
   overflow: visible;
 `

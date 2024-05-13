@@ -10,7 +10,7 @@ to {
 }
 `
 
-export default styled.button`
+export default styled('button')`
   ${({ theme: { button, tooltip } }) => css`
     color: ${button.color};
     background-color: ${button.bg};

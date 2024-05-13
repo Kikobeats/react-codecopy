@@ -14,7 +14,7 @@ const blackStyle = css`
   color: white;
 `
 
-const Pre = styled.pre`
+const Pre = styled('pre')`
   padding: 30px;
   border-radius: 2px;
   overflow-x: auto;
