@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import { styled, css } from 'styled-components'
 import React, { useState } from 'react'
 import { Copy } from 'react-feather'
 

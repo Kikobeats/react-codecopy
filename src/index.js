@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import styled, { ThemeProvider, css } from 'styled-components'
+import { styled, ThemeProvider, css } from 'styled-components'
 
 import ClipboardButton from './button'
 import ClipboardIcon from './icon'
