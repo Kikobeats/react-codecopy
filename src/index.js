@@ -28,10 +28,19 @@ const ClipboardWrapper = styled('div')`
 
 const native = text => navigator.clipboard.writeText(text)
 
-const CodeCopy = ({ iconComponent: IconComponent, copy = native, onCopy, ...props }) => {
-  const [isHover, setHover] = useState(props.interactive)
-  const [label, setLabel] = useState(props.labels.copy)
-  const { labels, theme, children, text, interactive, ...restProps } = props
+const CodeCopy = ({
+  iconComponent: IconComponent = ClipboardIconComponent,
+  copy = native,
+  onCopy,
+  interactive = false,
+  theme = 'light',
+  labels = { copy: 'Copy to clipboard', copied: 'Copied!' },
+  children,
+  text,
+  ...restProps
+}) => {
+  const [isHover, setHover] = useState(interactive)
+  const [label, setLabel] = useState(labels.copy)
   const onMouseEnter = () => setHover(true)
   const onMouseLeave = () => setHover(false)
 
@@ -44,7 +53,7 @@ const CodeCopy = ({ iconComponent: IconComponent, copy = native, onCopy, ...prop
       >
         <ClipboardButton
           className={`codecopy__button codecopy__button__${theme}`}
-          $isHover={isHover || props.interactive}
+          $isHover={isHover || interactive}
           aria-label={label}
           onMouseLeave={() => setLabel(labels.copy)}
           onClick={() => copy(text).then(() => setLabel(labels.copied))}
@@ -56,16 +65,6 @@ const CodeCopy = ({ iconComponent: IconComponent, copy = native, onCopy, ...prop
       </ClipboardWrapper>
     </ThemeProvider>
   )
-}
-
-CodeCopy.defaultProps = {
-  iconComponent: ClipboardIconComponent,
-  interactive: false,
-  theme: 'light',
-  labels: {
-    copy: 'Copy to clipboard',
-    copied: 'Copied!'
-  }
 }
 
 export default CodeCopy
