@@ -65,7 +65,7 @@
     "npm-check-updates": "latest",
     "prop-types": "latest",
     "react": "^18",
-    "react-dom": "^18",
+    "react-dom": "^19",
     "react-feather": "latest",
     "rollup": "latest",
     "rollup-plugin-filesize": "latest",
