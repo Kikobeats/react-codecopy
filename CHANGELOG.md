@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 5.0.16 (2025-09-06)
+
 ### 5.0.15 (2025-08-15)
 
 ### [5.0.14](https://github.com/Kikobeats/react-codecopy/compare/v5.0.13...v5.0.14) (2024-07-18)
