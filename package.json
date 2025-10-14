@@ -2,7 +2,7 @@
   "name": "react-codecopy",
   "description": "\"Copy to clipboard button\" for your code snippets",
   "homepage": "https://react-codecopy.vercel.app",
-  "version": "5.0.16",
+  "version": "5.0.17",
   "main": "dist/codecopy.js",
   "module": "dist/codecopy.mjs",
   "author": {
