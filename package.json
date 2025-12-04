@@ -55,7 +55,7 @@
     "nano-staged": "latest",
     "npm-check-updates": "latest",
     "prop-types": "latest",
-    "react": "^18",
+    "react": "^19",
     "react-dom": "^18",
     "react-feather": "latest",
     "rollup": "latest",
