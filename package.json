@@ -1,6 +1,6 @@
 {
   "name": "react-codecopy",
-  "description": "\"Copy to clipboard button\" for your code snippets",
+  "description": "React \"copy to clipboard\" button for code snippets with a small, accessible component API.",
   "homepage": "https://react-codecopy.vercel.app",
   "version": "5.0.21",
   "main": "dist/codecopy.js",
@@ -20,12 +20,15 @@
   },
   "keywords": [
     "button",
-    "clip",
     "clipboard",
     "code",
+    "component",
     "copy",
+    "docs",
+    "highlight",
     "react",
-    "snippet"
+    "snippet",
+    "ux"
   ],
   "devDependencies": {
     "@babel/eslint-parser": "latest",
@@ -102,6 +105,7 @@
   },
   "nano-staged": {
     "*.js": [
+      "npx @kikobeats/prettier-standard",
       "standard --fix"
     ],
     "package.json": [
